@@ -21,11 +21,12 @@ function sumWhile(num) {
 console.log(sumWhile(test));
 
 function sumRecursion(num) {
+  const nums = num;
   if (num.length === 0) {
     return 0;
   }
-  const first = num.shift();
-  return first + sumRecursion(num);
+  const first = nums.shift();
+  return first + sumRecursion(nums);
 }
 console.log(sumRecursion(test));
 
