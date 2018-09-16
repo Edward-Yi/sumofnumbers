@@ -24,14 +24,12 @@ function sumRecursion(num) {
   if (num.length === 0) {
     return 0;
   }
-  const first = num.shift;
+  const first = num.shift();
   return first + sumRecursion(num);
 }
 console.log(sumRecursion(test));
 
 function sumTheSimpleWay(nums) {
-  return _.reduce(nums, function (memo, num) {
-    return memo + num;
-  }, 0);
+  return _.reduce(nums, function (memo, num) { return memo + num; }, 0);
 }
 console.log(sumTheSimpleWay(test));
